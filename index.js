@@ -2,7 +2,6 @@ const fs = require('fs');
 const ms = require('ms');
 const Discord = require('discord.js');
 const db = require('quick.db');
-var { prefix, token } = require('./config.json');
 const client = new Discord.Client();
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {
@@ -217,19 +216,6 @@ client.on('clickButton', async (button) => {
 client.login(token);
 
 
-
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.get("/", (req, res) => {
-  res.send(
-    "Hi"  );
-});
-
-app.listen(port, () => {
-  console.log(`Axdroid is now ready`);
-});
 
 
 
